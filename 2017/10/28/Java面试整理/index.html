@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>Java面试整理 | 技术窝 | 厚积薄发</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <meta name="theme-color" content="#333333">
-  
-  
-  <meta name="keywords" content="Java">
-  <meta name="description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Java面试整理 | 技术窝 | 厚积薄发</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Java">
+    <meta name="description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面试整理">
@@ -19,8 +29,6 @@
 <meta property="og:description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/图片1.png">
-<meta property="og:image" content="file:////tmp/wps-luos/ksohtml/wpsbkrT9s.png">
-<meta property="og:image" content="file:////tmp/wps-luos/ksohtml/wpsy52Liy.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/HashMap02.jpg">
 <meta property="og:image" content="file:////tmp/wps-luos/ksohtml/wpsQPnUCI.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/HashMap03.jpg">
@@ -42,78 +50,96 @@
 <meta name="twitter:title" content="Java面试整理">
 <meta name="twitter:description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
 <meta name="twitter:image" content="http://yoursite.com/2017/10/28/Java面试整理/图片1.png">
-  
-    <link rel="alternative" href="/atom.xml" title="技术窝" type="application/atom+xml">
-  
-  <meta name="summary" content="陌上花开 可缓缓归矣">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css">
+    
+        <link rel="alternate" type="application/atom+xml" title="技术窝" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
 
 <body>
-  <div id="loading" class="active"></div>
+    <div id="loading" class="active"></div>
 
-  <nav id="menu" class="hide" >
-   <div class="inner flex-row-vertical">
-  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-      <i class="icon icon-lg icon-close"></i>
-  </a>
-  <div class="brand-wrap">
-    <div class="brand">
-      <a href="/" class="avatar"><img src="/img/head.jpg"></a>
-      <hgroup class="introduce">
-        <h5 class="nickname">Leonard</h5>
-        <a href="mailto:chunguangwork@gmail.com" title="chunguangwork@gmail.com" class="mail">chunguangwork@gmail.com</a>
-      </hgroup>
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Leonard</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
     </div>
   </div>
-  <div class="scroll-wrap flex-col">
-    <ul class="nav">
-      
-          <li class="waves-block waves-effect">
-            <a href="/"  >
-              <i class="icon icon-lg icon-home"></i>
-              主页
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/archives"  >
-              <i class="icon icon-lg icon-archives"></i>
-              归类
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/tags"  >
-              <i class="icon icon-lg icon-tags"></i>
-              标签
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="https://github.com/LLLucian" target="_blank" >
-              <i class="icon icon-lg icon-github"></i>
-              Github
-            </a>
-          </li>
-      
-    </ul>
+</aside>
 
-    <footer class="footer">
-  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
-  <p>技术窝 &copy; 2018</p>
-  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
-  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
-  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
-</footer>
-
-  </div>
-</div>
-
-  </nav>
-  <main id="main">
-    <header class="top-header" id="header">
+    <main id="main">
+        <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
@@ -124,94 +150,69 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
         </div>
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
     </div>
 </header>
-<header class="content-header">
-  <div class="container">
-    <h1 class="author">Java面试整理</h1>
-    <h5 class="subtitle">
-        
-            <time datetime="2017-10-28T11:10:43.000Z" itemprop="datePublished" class="page-time">
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Java面试整理</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-10-28T11:10:43.000Z" itemprop="datePublished" class="page-time">
   2017 Oct 28
 </time>
 
 
-        
-    </h5>
-  </div>
+            
+        </h5>
+    </div>
+
+    
+
+
 </header>
 
-    <div class="container body-wrap">
-      <article id="post-Java面试整理" 
-  class="article article-type-post" itemprop="blogPost">
-    <div class="post-meta flex-row">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
 
-    </div>
-    <div class="post-body">
-        <aside class="post-widget" id="post-widget">
-
-            
-            <div class="post-share" id="post-share">
-    <div class="tit">分享到：</div>
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
-        </a>
-      </li>
-    </ul>
- </div>
-
-            
-
-            
-            <nav class="post-toc-wrap" id="post-toc">
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
             <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、java基础"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、java基础</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、线程池的种类，区别和使用场景"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1、线程池的种类，区别和使用场景</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、分析线程池的实现原理和线程的调度过程"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2、分析线程池的实现原理和线程的调度过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、线程池如何调优"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3、线程池如何调优</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、动态代理的几种方式"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4、动态代理的几种方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5、HashMap的并发问题"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">5、HashMap的并发问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6、了解LinkedHashMap的应用吗"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">6、了解LinkedHashMap的应用吗</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7、反射的原理，反射创建类实例的三种方式是什么？"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">7、反射的原理，反射创建类实例的三种方式是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8、cloneable接口实现原理，浅拷贝or深拷贝"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">8、cloneable接口实现原理，浅拷贝or深拷贝</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9、Java-NIO使用"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">9、Java NIO使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10、hashtable和hashmap的区别及实现原理"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">10、hashtable和hashmap的区别及实现原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11、LinkedList和ArrayList的区别及实现原理"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">11、LinkedList和ArrayList的区别及实现原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#12、反射中，Class-forName和ClassLoader区别"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">12、反射中，Class.forName和ClassLoader区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#13、有没有可能2个不相等的对象有相同的hashcode？"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">13、有没有可能2个不相等的对象有相同的hashcode？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、JVM相关"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、JVM相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，他们的执行顺序"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1、类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，他们的执行顺序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、JVM内存分代"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2、JVM内存分代</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、Java-8的内存分代改进"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3、Java 8的内存分代改进</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、jvm中一次完整的GC流程（从ygc到fgc）是怎样的，重点讲讲对象如何晋升到老年代"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">4、jvm中一次完整的GC流程（从ygc到fgc）是怎样的，重点讲讲对象如何晋升到老年代</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5、几种主要的jvm参数等"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">5、几种主要的jvm参数等</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6、你知道哪几种垃圾收集器，各自的优缺点，重点讲下cms，g1"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">6、你知道哪几种垃圾收集器，各自的优缺点，重点讲下cms，g1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7、新生代和老生代的内存回收策略"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">7、新生代和老生代的内存回收策略</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8、深入分析了Classloader，双亲委派机制"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">8、深入分析了Classloader，双亲委派机制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#15、g1和cms区别-吞吐量优先和响应优先的垃圾收集器选择"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">15、g1和cms区别,吞吐量优先和响应优先的垃圾收集器选择</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、数据库"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、数据库</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、MySQL-InnoDB存储的文件结构"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1、MySQL InnoDB存储的文件结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、索引树是如何维护的？"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2、索引树是如何维护的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、数据库自增主键可能的问题"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3、数据库自增主键可能的问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、MySQL的几种优化"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">4、MySQL的几种优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5、mysql索引为什么使用B-树"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">5、mysql索引为什么使用B+树</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6、数据库锁表的相关处理"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">6、数据库锁表的相关处理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、网络相关"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、网络相关</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#五、其他"><span class="post-toc-number">5.</span> <span class="post-toc-text">五、其他</span></a></li></ol>
-            </nav>
+        </nav>
+    </aside>
+
+
+<article id="post-Java面试整理"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Java面试整理</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017 10月 28 19:10:43" datetime="2017-10-28T11:10:43.000Z"  itemprop="datePublished">2017 10月 28</time>
+
             
-        </aside>
 
-        <div class="post-main">
 
-            <div class="post-content" id="post-content" itemprop="postContent">
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
             <p>（持续更新。。。。。。）</p>
 <h2 id="一、java基础"><a href="#一、java基础" class="headerlink" title="一、java基础"></a>一、java基础</h2><h3 id="1、线程池的种类，区别和使用场景"><a href="#1、线程池的种类，区别和使用场景" class="headerlink" title="1、线程池的种类，区别和使用场景"></a>1、线程池的种类，区别和使用场景</h3><p>newCachedThreadPool：</p>
 <ul>
@@ -247,7 +248,13 @@
 <li>当设置allowCoreThreadTimeOut(true)时，线程池中corePoolSize线程空闲时间达到keepAliveTime也将关闭</li>
 </ol>
 <p>这个算法背后的理念是：该池大部分时间仅使用核心线程（4个），即使有适量的任务在队列中等待运行。这时线程池就可以用作节流阀。如果挤压的请求变得非常多，这时该池就会尝试运行更多的线程来清理；这时第二个节流阀—最大线程数就起作用了。</p>
-<h3 id="2、分析线程池的实现原理和线程的调度过程"><a href="#2、分析线程池的实现原理和线程的调度过程" class="headerlink" title="2、分析线程池的实现原理和线程的调度过程"></a>2、分析线程池的实现原理和线程的调度过程</h3><p><img src="图片1.png" alt=""></p>
+<h3 id="2、分析线程池的实现原理和线程的调度过程"><a href="#2、分析线程池的实现原理和线程的调度过程" class="headerlink" title="2、分析线程池的实现原理和线程的调度过程"></a>2、分析线程池的实现原理和线程的调度过程</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="图片1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <p>一个线程池包括以下四个基本组成部分：</p>
 <ul>
 <li>线程池管理器（ThreadPool）：用于创建并管理线程池，包括 创建线程池，销毁线程池，添加新任务；</li>
@@ -310,7 +317,13 @@
 <p><strong>1）假设我们有两个线程。</strong>我们再回头看一下我们的 transfer代码中的这个细节：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;    Entry&lt;K,V&gt; next = e.next; <span class="comment">// &lt;--假设线程一执行到这里就被调度挂起了</span></span><br><span class="line">    <span class="keyword">int</span> i = indexFor(e.hash, newCapacity);    </span><br><span class="line">    e.next = newTable[i];    </span><br><span class="line">    newTable[i] = e;    </span><br><span class="line">    e = next;</span><br><span class="line">&#125; <span class="keyword">while</span> (e != <span class="keyword">null</span>);</span><br></pre></td></tr></table></figure>
 <p>而我们的线程二执行完成了。于是我们有下面的这个样子。</p>
-<p><img src="file:////tmp/wps-luos/ksohtml/wpsbkrT9s.png" alt="img"><img src="file:////tmp/wps-luos/ksohtml/wpsy52Liy.png" alt="img"><img src="HashMap02.jpg" alt=""> </p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="HashMap02.jpg" alt="img](file:////tmp/wps-luos/ksohtml/wpsbkrT9s.png)![img](file:////tmp/wps-luos/ksohtml/wpsy52Liy.png)![" title="">
+                </div>
+                <div class="image-caption">img](file:////tmp/wps-luos/ksohtml/wpsbkrT9s.png)![img](file:////tmp/wps-luos/ksohtml/wpsy52Liy.png)![</div>
+            </figure> 
 <p>注意，<strong>因为Thread1的 e 指向了key(3)，而next指向了key(7)，其在线程二rehash后，指向了线程二重组后的链表</strong>。我们可以看到链表的顺序被反转后。</p>
 <p><strong>2）线程一被调度回来执行。</strong></p>
 <p>· <strong>先是执行 newTalbe[i] = e;</strong></p>
@@ -319,25 +332,67 @@
 <p><img src="file:////tmp/wps-luos/ksohtml/wpsQPnUCI.png" alt="img"><img src="HashMap03.jpg" alt=""></p>
 <p><strong>3）一切安好。</strong></p>
 <p>线程一接着工作。<strong>把key(7)摘下来，放到newTable[i]的第一个，然后把e和next往下移</strong>。</p>
-<p><img src="HashMap04.jpg" alt=""> </p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="HashMap04.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure> 
 <p>4）<strong>环形链接出现。</strong></p>
 <p><strong>e.next = newTable[i] 导致  key(3).next 指向了 key(7)</strong></p>
 <p><strong>注意：此时的key(7).next 已经指向了key(3)， 环形链表就这样出现了。</strong></p>
 <p><strong>于是，当我们的线程一调用到，HashTable.get(11)时，悲剧就出现了——Infinite Loop。</strong></p>
-<p><img src="HashMap05.jpg" alt=""></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="HashMap05.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <h3 id="6、了解LinkedHashMap的应用吗"><a href="#6、了解LinkedHashMap的应用吗" class="headerlink" title="6、了解LinkedHashMap的应用吗"></a>6、了解LinkedHashMap的应用吗</h3><p>LinkedHashMap实现与HashMap的不同之处在于，LinkedHashMap维护着一个运行于所有条目的双重链接列表。此链接列表定义了迭代顺序，该迭代顺序可以是插入顺序（insert-order）或者是访问顺序，其中默认的迭代访问顺序就是插入顺序，即可以按插入的顺序遍历元素，这点和HashMap有很大的不同。</p>
 <p> LinkedHashMap除了支持默认的插入顺序，还支持访问顺序。所谓访问顺序(access-order)是指在迭代遍历列表中的元素时最近访问的元素会排在LinkedHashMap的尾部 。从其构造函数中可以看出当accessOrder设为true时即为访问顺序。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">LinkedHashMap</span><span class="params">(<span class="keyword">int</span> initialCapacity,</span></span></span><br><span class="line"><span class="function"><span class="params">                  	  <span class="keyword">float</span> loadFactor,</span></span></span><br><span class="line"><span class="function"><span class="params">                     <span class="keyword">boolean</span> accessOrder)</span> </span>&#123;</span><br><span class="line">           <span class="keyword">super</span>(initialCapacity, loadFactor);</span><br><span class="line">           <span class="keyword">this</span>.accessOrder = accessOrder;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="LinkedHashMap1.png" alt=""></p>
-<p><img src="LinkedHashMap2.png" alt=""></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="LinkedHashMap1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="LinkedHashMap2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <p>使用的时候，<strong>最近经常使用的元素就放在后面，最近最少使用的就排在了链表的前面。</strong>       </p>
 <p>基于LinkedHashMap的访问顺序的特点，可构造一个LRU（Least Recently Used）最近最少使用简单缓存。也有一些开源的缓存产品如ehcache的淘汰策略（LRU）就是在LinkedHashMap上扩展的。</p>
-<h3 id="7、反射的原理，反射创建类实例的三种方式是什么？"><a href="#7、反射的原理，反射创建类实例的三种方式是什么？" class="headerlink" title="7、反射的原理，反射创建类实例的三种方式是什么？"></a>7、反射的原理，反射创建类实例的三种方式是什么？</h3><p><img src="reflect.jpg" alt=""></p>
+<h3 id="7、反射的原理，反射创建类实例的三种方式是什么？"><a href="#7、反射的原理，反射创建类实例的三种方式是什么？" class="headerlink" title="7、反射的原理，反射创建类实例的三种方式是什么？"></a>7、反射的原理，反射创建类实例的三种方式是什么？</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="reflect.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <p>假如你写了一段代码：<code>Object o=new Object();</code> 运行起来。</p>
 <p>首先JVM会启动，你的代码会编译成一个.class文件，然后被类加载器加载进jvm的内存中，把类信息保存在方法区数据结构中，并在Java堆中生成一个Class对象，作为类信息的入口,注意这个不是new出来的对象，而是类的类型对象，<strong>每个类只有一个class对象</strong></p>
-<p><img src="reflect2.png" alt=""></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="reflect2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <p>反射有什么用？<strong>通过Java的反射机制，可以在运行期间获取类的字段、方法、父类和接口等信息。</strong></p>
-<p><img src="reflect3.png" alt=""></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="reflect3.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <h3 id="8、cloneable接口实现原理，浅拷贝or深拷贝"><a href="#8、cloneable接口实现原理，浅拷贝or深拷贝" class="headerlink" title="8、cloneable接口实现原理，浅拷贝or深拷贝"></a>8、cloneable接口实现原理，浅拷贝or深拷贝</h3><p>​    clone方法执行的是浅拷贝， 在编写程序时要注意这个细节。如果想要深拷贝一个对象， 这个对象必须要实现Cloneable接口，实现clone方法，并且在clone方法内部，把该对象引用的其他对象也要clone一份 ， 这就要求这个被引用的对象必须也要实现Cloneable接口并且实现clone方法。</p>
 <ul>
 <li><p>会有不彻底的深拷贝。如何进行彻底的深拷贝？</p>
@@ -365,7 +420,13 @@
 <p>有了内存分代，情况就不同了，<strong>新创建的对象会在新生代中分配内存，经过多次回收仍然存活下来的对象存放在老年代中，静态属性、类信息等存放在永久代中，新生代中的对象存活时间短，只需要在新生代区域中频繁进行GC，老年代中对象生命周期长，内存回收的频率相对较低，不需要频繁进行回收，永久代中回收效果太差，一般不进行垃圾回收，还可以根据不同年代的特点采用合适的垃圾收集算法</strong>。分代收集大大提升了收集效率，这些都是内存分代带来的好处。</p>
 <p><strong>内存分代划分</strong></p>
 <p>Java虚拟机将堆内存划分为新生代、老年代和永久代，永久代是HotSpot虚拟机特有的概念，它采用永久代的方式来实现方法区，其他的虚拟机实现没有这一概念，而且HotSpot也有取消永久代的趋势，在JDK 1.7中HotSpot已经开始了“去永久化”，把原本放在永久代的字符串常量池移出。永久代主要存放常量、类信息、静态变量等数据，与垃圾回收关系不大，新生代和老年代是垃圾回收的主要区域。内存分代示意图如下：</p>
-<p><img src="jvm.jpg" alt=""></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="jvm.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <p><strong>新生代（Young）</strong></p>
 <p>新生成的对象优先存放在新生代中，新生代对象朝生夕死，存活率很低，在新生代中，常规应用进行一次垃圾收集一般可以回收70% ~ 95% 的空间，回收效率很高。</p>
 <p>HotSpot将新生代划分为三块，一块较大的<strong>Eden空间</strong>和两块较小的<strong>Survivor空间</strong>，默认比例为8：1：1。划分的目的是因为HotSpo<strong>t采用复制算法来回收新生代</strong>，<strong>设置这个比例是为了充分利用内存空间，减少浪费</strong>。新生成的对象在Eden区分配（大对象除外，大对象直接进入老年代），当Eden区没有足够的空间进行分配时，虚拟机将发起一次Minor GC。</p>
@@ -391,20 +452,50 @@
 <p>G1收集器：面向服务端应用的垃圾收集器，过程：初始标记；并发标记；最终标记；筛选回收。<strong>整体上看是“标记-整理”，局部看是“复制”，不会产生内存碎片</strong>。<br><strong>吞吐量优先</strong>的并行收集器：以到达一定的吞吐量为目标，适用于科学技术和后台处理等。<br>响应时间优先的并发收集器：保证系统的响应时间，减少垃圾收集时的停顿时间。适用于应用服务器、电信领域等。</p>
 <p>说一说你对环境变量classpath的理解？如果一个类不在classpath下，为什么会抛出ClassNotFoundException异常，如果在不改变这个类路径的前期下，怎样才能正确加载这个类？<br>说一下强引用、软引用、弱引用、虚引用以及他们之间和gc的关系</p>
 <h2 id="三、数据库"><a href="#三、数据库" class="headerlink" title="三、数据库"></a>三、数据库</h2><h3 id="1、MySQL-InnoDB存储的文件结构"><a href="#1、MySQL-InnoDB存储的文件结构" class="headerlink" title="1、MySQL InnoDB存储的文件结构"></a>1、MySQL InnoDB存储的文件结构</h3><p>从InnoDB存储引擎的逻辑存储结构看，所有数据都被逻辑地存放在一个空间中，称之为表空间（tablespace）。表空间又由段（segment）、区（extent)、页（page）组成。页在一些文档中有时也称为块（block），InnoDB存储引擎的逻辑存储结构大致如图：</p>
-<p><img src="innodb_struct.png" alt=""></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="innodb_struct.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <p>表空间可以看做是InnoDB存储引擎逻辑结构的最高层，所有的数据都存放在表空间中。</p>
 <p>上图中显示了表空间是由各个段组成，常见的段有数据段、索引段、回滚段等。InnoDB存储引擎表是索引组织的（index organized），因此数据即索引，索引即数据。那么数据段即为B+树的叶子节点（图中Leaf of node segment），索引段即为B+树的非索引节点（图中Nonleaf node segment）。</p>
 <p>区是由连续页组成的空间，在任何情况下每个区的大小都为1MB。为了保证区中页的连续性InnoDB存储引擎一次从磁盘申请4~5个区。在默认情况下，InnoDB存储引擎页的大小为16KB，即一个区中一共有64个连续的页。</p>
 <p>同大多数数据库一样，InnoDB有页（Page）的概念（也可以称为块），页是InnoDB磁盘管理的最小单位。</p>
 <h3 id="2、索引树是如何维护的？"><a href="#2、索引树是如何维护的？" class="headerlink" title="2、索引树是如何维护的？"></a>2、索引树是如何维护的？</h3><p>下图是MyISAM索引的原理图：</p>
-<p><img src="MyISAM_primary_key.png" alt=""></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="MyISAM_primary_key.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <p>在MyISAM中，主索引和辅助索引（Secondary key）在结构上没有任何区别，只是主索引要求key是唯一的，而辅助索引的key可以重复。如果我们在Col2上建立一个辅助索引，则此索引的结构如下图所示：</p>
-<p><img src="MyISAM_secondary_key.png" alt=""></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="MyISAM_secondary_key.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <p>MyISAM的索引方式也叫做“非聚集”的，之所以这么称呼是为了与InnoDB的聚集索引区分。</p>
 <p>在InnoDB中，表数据文件本身就是按B+Tree组织的一个索引结构，这棵树的叶节点data域保存了完整的数据记录。这个索引的key是数据表的主键，因此InnoDB表数据文件本身就是主索引。</p>
-<p><img src="Innodb_primary_key.png" alt=""></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="Innodb_primary_key.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <p>InnoDB的所有辅助索引都引用主键作为data域。</p>
-<p><img src="Innodb_secondary_key.png" alt=""></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="Innodb_secondary_key.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 <h3 id="3、数据库自增主键可能的问题"><a href="#3、数据库自增主键可能的问题" class="headerlink" title="3、数据库自增主键可能的问题"></a>3、数据库自增主键可能的问题</h3><ul>
 <li>数据库单点造成无法水平切分</li>
 <li>把公司业务的关键运营数据完全暴露</li>
@@ -439,21 +530,97 @@
 <h2 id="四、网络相关"><a href="#四、网络相关" class="headerlink" title="四、网络相关"></a>四、网络相关</h2><p>http1.0和http1.1有什么区别<br>TCP/IP协议<br>TCP三次握手和四次挥手的流程，为什么断开连接要4次,如果握手只有两次，会出现什么<br>TIME_WAIT和CLOSE_WAIT的区别<br>说说你知道的几种HTTP响应码<br>当你用浏览器打开一个链接的时候，计算机做了哪些工作步骤<br>TCP/IP如何保证可靠性，数据包有哪些数据组成<br>长连接与短连接<br>Http请求get和post的区别以及数据包格式<br>简述tcp建立连接3次握手，和断开连接4次握手的过程；关闭连接时，出现TIMEWAIT过多是由什么原因引起，是出现在主动断开方还是被动断开方。</p>
 <h2 id="五、其他"><a href="#五、其他" class="headerlink" title="五、其他"></a>五、其他</h2><p>maven解决依赖冲突,快照版和发行版的区别<br>Linux下IO模型有几种，各自的含义是什么<br>实际场景问题，海量登录日志如何排序和处理SQL操作，主要是索引和聚合函数的应用<br>实际场景问题解决，典型的TOP K问题<br>线上bug处理流程<br>如何从线上日志发现问题<br>linux利用哪些命令，查找哪里出了问题（例如io密集任务，cpu过度）<br>场景问题，有一个第三方接口，有很多个线程去调用获取数据，现在规定每秒钟最多有10个线程同时调用它，如何做到。<br>用三个线程按顺序循环打印abc三个字母，比如abcabcabc。<br>常见的缓存策略有哪些，你们项目中用到了什么缓存系统，如何设计的<br>设计一个秒杀系统，30分钟没付款就自动关闭交易（并发会很高）<br>请列出你所了解的性能测试工具<br>后台系统怎么防止请求重复提交？</p>
 
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-03-11T08:14:19.297Z" itemprop="dateUpdated">2018 3月 11 16:14:19</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/10/28/Java面试整理/" target="_blank" rel="external">http://yoursite.com/2017/10/28/Java面试整理/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="Leonard">
+            Leonard
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
 
             
-            
-            <blockquote>
-                <p>
-                本文地址：
-                <a href="http://yoursite.com/2017/10/28/Java面试整理/" target="_blank" rel="external">http://yoursite.com/2017/10/28/Java面试整理/</a>
-                </p>
-                <footer><cite><a href="http://yoursite.com">@技术窝</a></cite></footer>
-            </blockquote>
-            </div>
-            
-<nav class="post-nav">
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/10/28/Java面试整理/&title=《Java面试整理》 — 技术窝&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/10/28/Java面试整理/&title=《Java面试整理》 — 技术窝&source=陌上花开 可缓缓归矣" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/10/28/Java面试整理/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java面试整理》 — 技术窝&url=http://yoursite.com/2017/10/28/Java面试整理/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/10/28/Java面试整理/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
   
-    <div class="waves-block waves-effect prev fl">
+    <div class="waves-block waves-effect prev">
       <a href="/2018/03/11/hello-world/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
         <h4 class="title">Hello World</h4>
@@ -465,97 +632,151 @@
 </nav>
 
 
-            
-            
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Java面试整理" data-title="Java面试整理" data-url="http://yoursite.com/2017/10/28/Java面试整理/index.html"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"ysblog"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
 </div>
 
 
 
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
 
 
-        </div>
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
     </div>
-</article>
-
+    <div class="bottom">
+        <p><span>Leonard &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
     </div>
-  </main>
-<div class="mask" id="mask"></div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<script>
-var BLOG_SHARE = {
-    title: "Java面试整理",
-    pic: "/img/head.jpg",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://yoursite.com/2017/10/28/Java面试整理/index.html"
-};
-</script>
-<div class="global-share" id="global-share">
-    <div class="tit">分享到：</div>
+
+
+<div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/10/28/Java面试整理/&title=《Java面试整理》 — 技术窝&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/10/28/Java面试整理/&title=《Java面试整理》 — 技术窝&source=陌上花开 可缓缓归矣" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/10/28/Java面试整理/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java面试整理》 — 技术窝&url=http://yoursite.com/2017/10/28/Java面试整理/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/10/28/Java面试整理/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
 
-<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOklEQVR42u3aS27jMBAFwNz/0gqQbWL6PVIejMjiyhBki6VFm/35+orX9bNeXbl+rfE949/8ff22hYGB8VjGNVxzm0juH3833xsGBsY5jHGQTWD5nSsv6+V1DAwMjHi7+YEyD7gYGBgYLaMNsvlWMDAwMMaMPAVtA2tbVvt4Lo6BgfFARtsY+JefP9jfwMDAeAjjKlfbwkzS1Bt2hYGBsTVjpdTVHh/nynDjp99QscPAwPjvGXn4yxPUdvyiHS/747sYGBhbMz7RsByH4CSw5uMXGBgY5zDa8a/8aJiH8rnEFQMD4wRGkqbOjV+0ITh5fZPTIhgYGFsz8lCYj4itDI29ycUxMDA2ZeTJZF5Qa4t07XfrdgIGBsbDGXcNPSRHvfZljUN59L+BgYGxESMvpeXpaB4687rgm3IbBgbGAYy24JU/uE1u60QXAwPjSEay9bz4tZ6+vnlNGBgYWzPalLUturWhMw/uL/eDgYFxAGMu1ZxrgrZp881zuBgYGI9itOGyDYvt2ER+EMTAwDiBkT+yvb4+wHpbYwADA2MjRn4onBwkjQ98+dgZBgbGCYw2tEU/lE/ILgzLRj+EgYGxBeMqV/uYdsCiHTLDwMA4gbESEFfaA/l26/4GBgbGpowkyLalsfYFJbylfw8MDIwtGEm4bEcx2sZAy/4j4GJgYBzPyE+XeTMyP/y9CfoYGBgYQRsgL5O1bQYMDAyMNoltD4hzzcv2RWBgYOzNWGkMtIW2PKTmSAwMjK0Z3zJqzFKI7C1PAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
 
-<script src="/js/main.js"></script>
 
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
 
 
 <div class="search-panel" id="search-panel">
     <ul class="search-result" id="search-result"></ul>
 </div>
-<script type="text/template" id="search-tpl">
+<template id="search-tpl">
 <li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
+    <a href="{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
         <div class="flex-row flex-middle">
             <div class="tags ellipsis">
@@ -565,15 +786,35 @@ var BLOG_SHARE = {
         </div>
     </a>
 </li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
 </script>
-
-<script src="/js/search.js"></script>
-
-
-
-
-
-
 
 
 
