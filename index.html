@@ -16,7 +16,7 @@
     <title>技术窝 | 厚积薄发</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="theme-color" content="#333333">
+    <meta name="theme-color" content="#3B3B3B">
     
     
     <meta name="keywords" content="">
@@ -88,7 +88,7 @@
             <li class="waves-block waves-effect">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
-                Categories
+                分类
               </a>
             </li>
         
@@ -153,6 +153,8 @@
         <time class="post-time" title="2018 3月 11 12:59:13" datetime="2018-03-11T04:59:13.000Z"  itemprop="datePublished">2018 3月 11</time>
 
         
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/机器学习/">机器学习</a></li></ul>
+
 
 
     </div>
@@ -191,46 +193,6 @@
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-hello-world"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018 3月 11 12:51:42" datetime="2018-03-11T04:51:42.670Z"  itemprop="datePublished">2018 3月 11</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/03/11/hello-world/">Hello World</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-    
-
-        <a href="/2018/03/11/hello-world/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
             <article id="post-Java面试整理"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -238,6 +200,8 @@ Qu...
         <time class="post-time" title="2017 10月 28 19:10:43" datetime="2017-10-28T11:10:43.000Z"  itemprop="datePublished">2017 10月 28</time>
 
         
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java学习/">Java学习</a></li></ul>
+
 
 
     </div>
@@ -260,7 +224,8 @@ Qu...
         （持续更新。。。。。。）
 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：
 
-底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQu...
+底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue(同步队列)
+通俗：当有新任务到来，则插入到SynchronousQueu...
     
 
         <a href="/2017/10/28/Java面试整理/" class="post-more waves-effect waves-button">
@@ -270,7 +235,7 @@ Qu...
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-面试/">-Java - 面试</a></li></ul>
 
     </div>
     
@@ -362,10 +327,10 @@ var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '客官 慢走！';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = '潜心研究技术!';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);

@@ -16,12 +16,12 @@
     <title>Java面试整理 | 技术窝 | 厚积薄发</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="theme-color" content="#333333">
+    <meta name="theme-color" content="#3B3B3B">
     
     
-    <meta name="keywords" content="Java">
+    <meta name="keywords" content="-Java - 面试">
     <meta name="description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
-<meta name="keywords" content="Java">
+<meta name="keywords" content="-Java - 面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面试整理">
 <meta property="og:url" content="http://yoursite.com/2017/10/28/Java面试整理/index.html">
@@ -45,7 +45,7 @@
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/MyISAM_secondary_key.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/Innodb_primary_key.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/Innodb_secondary_key.png">
-<meta property="og:updated_time" content="2018-03-11T08:14:19.297Z">
+<meta property="og:updated_time" content="2018-03-11T10:07:44.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面试整理">
 <meta name="twitter:description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
@@ -108,7 +108,7 @@
             <li class="waves-block waves-effect">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
-                Categories
+                分类
               </a>
             </li>
         
@@ -156,6 +156,8 @@
 </time>
 
 
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java学习/">Java学习</a></li></ul>
+
             
         </h5>
     </div>
@@ -185,6 +187,8 @@
             <time class="post-time" title="2017 10月 28 19:10:43" datetime="2017-10-28T11:10:43.000Z"  itemprop="datePublished">2017 10月 28</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java学习/">Java学习</a></li></ul>
+
 
 
             
@@ -519,7 +523,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-03-11T08:14:19.297Z" itemprop="dateUpdated">2018 3月 11 16:14:19</time>
+    最后更新时间：<time datetime="2018-03-11T10:07:44.924Z" itemprop="dateUpdated">2018 3月 11 18:07:44</time>
 </span><br>
 
 
@@ -539,7 +543,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-面试/">-Java - 面试</a></li></ul>
 
 
             
@@ -552,9 +556,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/03/11/hello-world/" id="post-prev" class="post-nav-link">
+      <a href="/2018/03/11/机器学习/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Hello World</h4>
+        <h4 class="title">机器学习笔记</h4>
       </a>
     </div>
   
@@ -566,6 +570,15 @@
 
     
 
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'true';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
 
 
 
@@ -663,10 +676,10 @@ var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '客官 慢走！';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = '潜心研究技术!';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);
