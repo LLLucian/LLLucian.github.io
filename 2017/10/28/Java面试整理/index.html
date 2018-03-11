@@ -30,7 +30,6 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/图片1.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/HashMap02.jpg">
-<meta property="og:image" content="file:////tmp/wps-luos/ksohtml/wpsQPnUCI.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/HashMap03.jpg">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/HashMap04.jpg">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/HashMap05.jpg">
@@ -45,7 +44,7 @@
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/MyISAM_secondary_key.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/Innodb_primary_key.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/Innodb_secondary_key.png">
-<meta property="og:updated_time" content="2018-03-11T10:22:05.700Z">
+<meta property="og:updated_time" content="2018-03-11T12:36:58.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面试整理">
 <meta name="twitter:description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
@@ -306,16 +305,16 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="HashMap02.jpg" alt="img](file:////tmp/wps-luos/ksohtml/wpsbkrT9s.png)![img](file:////tmp/wps-luos/ksohtml/wpsy52Liy.png)![" title="">
+                    <img src="HashMap02.jpg" alt="" title="">
                 </div>
-                <div class="image-caption">img](file:////tmp/wps-luos/ksohtml/wpsbkrT9s.png)![img](file:////tmp/wps-luos/ksohtml/wpsy52Liy.png)![</div>
+                <div class="image-caption"></div>
             </figure> 
 <p>注意，<strong>因为Thread1的 e 指向了key(3)，而next指向了key(7)，其在线程二rehash后，指向了线程二重组后的链表</strong>。我们可以看到链表的顺序被反转后。</p>
 <p><strong>2）线程一被调度回来执行。</strong></p>
 <p>· <strong>先是执行 newTalbe[i] = e;</strong></p>
 <p>· <strong>然后是e = next，导致了e指向了key(7)，</strong></p>
 <p>· <strong>而下一次循环的next = e.next导致了next指向了key(3)</strong> </p>
-<p><img src="file:////tmp/wps-luos/ksohtml/wpsQPnUCI.png" alt="img"><img src="HashMap03.jpg" alt=""></p>
+<p><img src="HashMap03.jpg" alt=""></p>
 <p><strong>3）一切安好。</strong></p>
 <p>线程一接着工作。<strong>把key(7)摘下来，放到newTable[i]的第一个，然后把e和next往下移</strong>。</p>
 <figure class="image-bubble">
@@ -523,7 +522,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-03-11T10:22:05.700Z" itemprop="dateUpdated">2018 3月 11 18:22:05</time>
+    最后更新时间：<time datetime="2018-03-11T12:36:58.072Z" itemprop="dateUpdated">2018 3月 11 20:36:58</time>
 </span><br>
 
 
