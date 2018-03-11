@@ -6,6 +6,8 @@
   <title>Java面试整理 | 技术窝 | 厚积薄发</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="theme-color" content="#333333">
+  
   
   <meta name="keywords" content="Java">
   <meta name="description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
@@ -41,22 +43,24 @@
 <meta name="twitter:description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
 <meta name="twitter:image" content="http://yoursite.com/2017/10/28/Java面试整理/图片1.png">
   
+    <link rel="alternative" href="/atom.xml" title="技术窝" type="application/atom+xml">
+  
   <meta name="summary" content="陌上花开 可缓缓归矣">
-  <link rel="shortcut icon" href="/">
+  <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <div id="loading" class="active"></div>
 
-  <nav id="menu"  >
+  <nav id="menu" class="hide" >
    <div class="inner flex-row-vertical">
   <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
       <i class="icon icon-lg icon-close"></i>
   </a>
   <div class="brand-wrap">
     <div class="brand">
-      <a href="/" class="avatar"><img src=""></a>
+      <a href="/" class="avatar"><img src="/img/head.jpg"></a>
       <hgroup class="introduce">
         <h5 class="nickname">Leonard</h5>
         <a href="mailto:chunguangwork@gmail.com" title="chunguangwork@gmail.com" class="mail">chunguangwork@gmail.com</a>
@@ -66,6 +70,34 @@
   <div class="scroll-wrap flex-col">
     <ul class="nav">
       
+          <li class="waves-block waves-effect">
+            <a href="/"  >
+              <i class="icon icon-lg icon-home"></i>
+              主页
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/archives"  >
+              <i class="icon icon-lg icon-archives"></i>
+              归类
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="/tags"  >
+              <i class="icon icon-lg icon-tags"></i>
+              标签
+            </a>
+          </li>
+      
+          <li class="waves-block waves-effect">
+            <a href="https://github.com/LLLucian" target="_blank" >
+              <i class="icon icon-lg icon-github"></i>
+              Github
+            </a>
+          </li>
+      
     </ul>
 
     <footer class="footer">
@@ -73,7 +105,7 @@
   <p>技术窝 &copy; 2018</p>
   <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
   <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
-  <a href="" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
 </footer>
 
   </div>
@@ -88,6 +120,20 @@
         </a>
         <div class="flex-col header-title ellipsis">Java面试整理</div>
         
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
     </div>
 </header>
@@ -118,7 +164,48 @@
         <aside class="post-widget" id="post-widget">
 
             
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
 
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、java基础"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、java基础</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、线程池的种类，区别和使用场景"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1、线程池的种类，区别和使用场景</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、分析线程池的实现原理和线程的调度过程"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2、分析线程池的实现原理和线程的调度过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、线程池如何调优"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3、线程池如何调优</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、动态代理的几种方式"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4、动态代理的几种方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5、HashMap的并发问题"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">5、HashMap的并发问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6、了解LinkedHashMap的应用吗"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">6、了解LinkedHashMap的应用吗</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7、反射的原理，反射创建类实例的三种方式是什么？"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">7、反射的原理，反射创建类实例的三种方式是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8、cloneable接口实现原理，浅拷贝or深拷贝"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">8、cloneable接口实现原理，浅拷贝or深拷贝</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9、Java-NIO使用"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">9、Java NIO使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10、hashtable和hashmap的区别及实现原理"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">10、hashtable和hashmap的区别及实现原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11、LinkedList和ArrayList的区别及实现原理"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">11、LinkedList和ArrayList的区别及实现原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#12、反射中，Class-forName和ClassLoader区别"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">12、反射中，Class.forName和ClassLoader区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#13、有没有可能2个不相等的对象有相同的hashcode？"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">13、有没有可能2个不相等的对象有相同的hashcode？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、JVM相关"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、JVM相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，他们的执行顺序"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1、类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，他们的执行顺序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、JVM内存分代"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2、JVM内存分代</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、Java-8的内存分代改进"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3、Java 8的内存分代改进</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、jvm中一次完整的GC流程（从ygc到fgc）是怎样的，重点讲讲对象如何晋升到老年代"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">4、jvm中一次完整的GC流程（从ygc到fgc）是怎样的，重点讲讲对象如何晋升到老年代</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5、几种主要的jvm参数等"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">5、几种主要的jvm参数等</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6、你知道哪几种垃圾收集器，各自的优缺点，重点讲下cms，g1"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">6、你知道哪几种垃圾收集器，各自的优缺点，重点讲下cms，g1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7、新生代和老生代的内存回收策略"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">7、新生代和老生代的内存回收策略</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8、深入分析了Classloader，双亲委派机制"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">8、深入分析了Classloader，双亲委派机制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#15、g1和cms区别-吞吐量优先和响应优先的垃圾收集器选择"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">15、g1和cms区别,吞吐量优先和响应优先的垃圾收集器选择</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、数据库"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、数据库</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、MySQL-InnoDB存储的文件结构"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1、MySQL InnoDB存储的文件结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、索引树是如何维护的？"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2、索引树是如何维护的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、数据库自增主键可能的问题"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3、数据库自增主键可能的问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、MySQL的几种优化"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">4、MySQL的几种优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5、mysql索引为什么使用B-树"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">5、mysql索引为什么使用B+树</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6、数据库锁表的相关处理"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">6、数据库锁表的相关处理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、网络相关"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、网络相关</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#五、其他"><span class="post-toc-number">5.</span> <span class="post-toc-text">五、其他</span></a></li></ol>
+            </nav>
             
         </aside>
 
@@ -380,6 +467,26 @@
 
             
             
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Java面试整理" data-title="Java面试整理" data-url="http://yoursite.com/2017/10/28/Java面试整理/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
 
 
 
@@ -392,10 +499,75 @@
 <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
+<script>
+var BLOG_SHARE = {
+    title: "Java面试整理",
+    pic: "/img/head.jpg",
+    summary: document.getElementsByName('summary')[0].content,
+    url: "http://yoursite.com/2017/10/28/Java面试整理/index.html"
+};
+</script>
+<div class="global-share" id="global-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 
 <script src="/js/main.js"></script>
 
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
 
 
 
