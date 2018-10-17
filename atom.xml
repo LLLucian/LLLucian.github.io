@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-19T17:06:00.058Z</updated>
+  <updated>2018-10-17T13:50:22.792Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript函数闭包</title>
+    <link href="http://yoursite.com/2018/10/17/JavaScript%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85/"/>
+    <id>http://yoursite.com/2018/10/17/JavaScript函数闭包/</id>
+    <published>2018-10-17T13:50:22.000Z</published>
+    <updated>2018-10-17T13:50:22.792Z</updated>
+    
+    <content type="html"><![CDATA[<p>闭包要解决的问题是：<strong>一个函数可以拥有私有变量，并且外部可以通过闭包访问该私有变量</strong>，如特权方法（类似JavaBean 的写法）：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> name =value;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.getName= <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> name; &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.setName= <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;name = value; &#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>闭包就是函数的局部变量集合，只是这些局部变量在函数返回后会继续存在。</li><li>闭包就是就是函数的“堆栈”在函数返回后并不释放，我们也可以理解为这些函数堆栈并不在栈上分配而是在堆上分配。</li><li>当在一个函数内定义另外一个函数就会产生闭包。</li></ul><p>为了便于理解，我们可以简单的将闭包理解为：</p><p>闭包：是指有权访问另外一个函数作用域中的变量的函数</p><p>闭包的注意点：</p><p>1）由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p><p>2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（PublicMethod），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p><p>闭包的用途：</p><p> 闭包可以用在许多地方。它的最大用处有两个，一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> n=<span class="number">999</span>;</span><br><span class="line"></span><br><span class="line">　　　　nAdd=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;n+=<span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">　　　　<span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　alert(n);</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">return</span> f2;</span><br><span class="line"></span><br><span class="line">　　&#125;</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> result=f1();</span><br><span class="line"></span><br><span class="line">　　result(); <span class="comment">// 999</span></span><br><span class="line"></span><br><span class="line">　　nAdd();</span><br><span class="line"></span><br><span class="line">　　result(); <span class="comment">// 1000</span></span><br></pre></td></tr></table></figure><p>　　</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;闭包要解决的问题是：&lt;strong&gt;一个函数可以拥有私有变量，并且外部可以通过闭包访问该私有变量&lt;/strong&gt;，如特权方法（类似JavaBean 的写法）：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td 
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>Google机器学习笔记</title>
