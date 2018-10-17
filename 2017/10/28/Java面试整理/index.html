@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
+<meta name="description" content="一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue(同步队列) 通俗：当有新">
 <meta name="keywords" content="Java,面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面试整理">
 <meta property="og:url" content="http://yoursite.com/2017/10/28/Java面试整理/index.html">
 <meta property="og:site_name" content="骆先生的博客">
-<meta property="og:description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
+<meta property="og:description" content="一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue(同步队列) 通俗：当有新">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/图片1.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/HashMap02.jpg">
@@ -105,10 +105,10 @@
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/MyISAM_secondary_key.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/Innodb_primary_key.png">
 <meta property="og:image" content="http://yoursite.com/2017/10/28/Java面试整理/Innodb_secondary_key.png">
-<meta property="og:updated_time" content="2018-03-11T12:39:15.674Z">
+<meta property="og:updated_time" content="2018-10-17T11:22:21.153Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面试整理">
-<meta name="twitter:description" content="（持续更新。。。。。。） 一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue">
+<meta name="twitter:description" content="一、java基础1、线程池的种类，区别和使用场景newCachedThreadPool：  底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue(同步队列) 通俗：当有新">
 <meta name="twitter:image" content="http://yoursite.com/2017/10/28/Java面试整理/图片1.png">
 
 
@@ -346,6 +346,8 @@
           
 
           
+            
+          
 
           
           
@@ -374,8 +376,7 @@
       
 
       
-        <p>（持续更新。。。。。。）</p>
-<h2 id="一、java基础"><a href="#一、java基础" class="headerlink" title="一、java基础"></a>一、java基础</h2><h3 id="1、线程池的种类，区别和使用场景"><a href="#1、线程池的种类，区别和使用场景" class="headerlink" title="1、线程池的种类，区别和使用场景"></a>1、线程池的种类，区别和使用场景</h3><p>newCachedThreadPool：</p>
+        <h2 id="一、java基础"><a href="#一、java基础" class="headerlink" title="一、java基础"></a>一、java基础</h2><h3 id="1、线程池的种类，区别和使用场景"><a href="#1、线程池的种类，区别和使用场景" class="headerlink" title="1、线程池的种类，区别和使用场景"></a>1、线程池的种类，区别和使用场景</h3><p>newCachedThreadPool：</p>
 <ul>
 <li>底层：返回ThreadPoolExecutor实例，corePoolSize为0；maximumPoolSize为Integer.MAX_VALUE；keepAliveTime为60L；unit为TimeUnit.SECONDS；workQueue为SynchronousQueue(同步队列)</li>
 <li>通俗：当有新任务到来，则插入到SynchronousQueue中，由于SynchronousQueue是同步队列，因此会在池中寻找可用线程来执行，若有可以线程则执行，若没有可用线程则创建一个线程来执行该任务；若池中线程空闲时间超过指定大小，则该线程会被销毁。</li>
@@ -668,6 +669,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
