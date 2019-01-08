@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-17T13:50:22.792Z</updated>
+  <updated>2019-01-08T03:01:20.544Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>微信小程序开发（1）——hello world</title>
+    <link href="http://yoursite.com/2019/01/08/world/"/>
+    <id>http://yoursite.com/2019/01/08/world/</id>
+    <published>2019-01-08T02:50:47.000Z</published>
+    <updated>2019-01-08T03:01:20.544Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>每次学习新的一门语言和技术，都以写hello world开始。现在学习开发小程序，也以hello world开始。</p></blockquote><p>首先要下载微信开发者工具：</p><p><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html" target="_blank" rel="noopener">https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html</a> </p><h3 id="1、创建项目"><a href="#1、创建项目" class="headerlink" title="1、创建项目"></a>1、创建项目</h3><p><img src="15469164199333.png" alt=""></p><p>首先选择项目目录，若还没有注册AppID，可以选择使用测试号的ID，然后填写项目名称，最后取消勾选“建立普通快速启动模板”的选项，不使用模板，自己来添加代码。</p><h3 id="2、添加Hello-world代码"><a href="#2、添加Hello-world代码" class="headerlink" title="2、添加Hello world代码"></a>2、添加Hello world代码</h3><p>在根目录下创建app.json，其内容如下。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>: [<span class="string">"pages/index/index"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在根目录下新建pages目录，然后在pages目录下新建index目录，接着在index目录下创建两个文件i<strong>ndex.wxml</strong>和i<strong>ndex.js</strong>。</p><p>index.wxml的内容：`<text>Hello World</text>，逻辑层运行在 JSCore 中，并没有一个完整浏览器对象</p><p>index.js的内容：<code>Page({})</code></p><h3 id="3、编译项目"><a href="#3、编译项目" class="headerlink" title="3、编译项目"></a>3、编译项目</h3><p>点击编译，默认使用普通编译。</p><p>编译后会生成多两个文件，index.json 和 index.wxss.</p><p>index.json的内容：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"usingComponents"</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>index.wxss的内容(只有一行注释)：<code>/* pages/index/index.wxss */</code></p><p>最后内容显示了hello world</p><p><img src="15469169969213.png" alt=""></p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>小程序的主要开发语言是 JavaScript 。小程序的开发渲染线程和脚本线程是分别运行在不同的线程中，逻辑层和渲染层是分开的，逻辑层运行在 JSCore 中，并没有一个完整浏览器对象，所以前端的一些库，比如JQuery在小程序中是无法运行的。</p><p>小程序开发过程中需要面对的是两大操作系统 iOS 和 Android 的微信客户端，以及用于辅助开发的小程序开发者工具。</p><p><strong>小程序的运行环境：</strong></p><table><thead><tr><th><strong>运行环境</strong></th><th><strong>逻辑层</strong></th><th><strong>渲染层</strong></th></tr></thead><tbody><tr><td>iOS</td><td>JavaScriptCore</td><td>WKWebView</td></tr><tr><td>安卓</td><td>X5 JSCore</td><td>X5浏览器</td></tr><tr><td>小程序开发者工具</td><td>NWJS</td><td>Chrome WebView</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;每次学习新的一门语言和技术，都以写hello world开始。现在学习开发小程序，也以hello world开始。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先要下载微信开发者工具：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mp.weix
+      
+    
+    </summary>
+    
+      <category term="小程序" scheme="http://yoursite.com/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序" scheme="http://yoursite.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript函数闭包</title>
     <link href="http://yoursite.com/2018/10/17/JavaScript%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85/"/>
     <id>http://yoursite.com/2018/10/17/JavaScript函数闭包/</id>
     <published>2018-10-17T13:50:22.000Z</published>
-    <updated>2018-10-17T13:50:22.792Z</updated>
+    <updated>2018-10-17T14:15:55.231Z</updated>
     
     <content type="html"><![CDATA[<p>闭包要解决的问题是：<strong>一个函数可以拥有私有变量，并且外部可以通过闭包访问该私有变量</strong>，如特权方法（类似JavaBean 的写法）：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> name =value;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.getName= <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> name; &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.setName= <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;name = value; &#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>闭包就是函数的局部变量集合，只是这些局部变量在函数返回后会继续存在。</li><li>闭包就是就是函数的“堆栈”在函数返回后并不释放，我们也可以理解为这些函数堆栈并不在栈上分配而是在堆上分配。</li><li>当在一个函数内定义另外一个函数就会产生闭包。</li></ul><p>为了便于理解，我们可以简单的将闭包理解为：</p><p>闭包：是指有权访问另外一个函数作用域中的变量的函数</p><p>闭包的注意点：</p><p>1）由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p><p>2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（PublicMethod），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p><p>闭包的用途：</p><p> 闭包可以用在许多地方。它的最大用处有两个，一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> n=<span class="number">999</span>;</span><br><span class="line"></span><br><span class="line">　　　　nAdd=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;n+=<span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">　　　　<span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　alert(n);</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">return</span> f2;</span><br><span class="line"></span><br><span class="line">　　&#125;</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> result=f1();</span><br><span class="line"></span><br><span class="line">　　result(); <span class="comment">// 999</span></span><br><span class="line"></span><br><span class="line">　　nAdd();</span><br><span class="line"></span><br><span class="line">　　result(); <span class="comment">// 1000</span></span><br></pre></td></tr></table></figure><p>　　</p>]]></content>
     

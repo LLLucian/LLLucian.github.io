@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[微信小程序开发（1）——hello world]]></title>
+    <url>%2F2019%2F01%2F08%2Fworld%2F</url>
+    <content type="text"><![CDATA[每次学习新的一门语言和技术，都以写hello world开始。现在学习开发小程序，也以hello world开始。 首先要下载微信开发者工具： https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html 1、创建项目 首先选择项目目录，若还没有注册AppID，可以选择使用测试号的ID，然后填写项目名称，最后取消勾选“建立普通快速启动模板”的选项，不使用模板，自己来添加代码。 2、添加Hello world代码在根目录下创建app.json，其内容如下。 123&#123; "pages": ["pages/index/index"]&#125; 在根目录下新建pages目录，然后在pages目录下新建index目录，接着在index目录下创建两个文件index.wxml和index.js。 index.wxml的内容：`Hello World，逻辑层运行在 JSCore 中，并没有一个完整浏览器对象 index.js的内容：Page({}) 3、编译项目点击编译，默认使用普通编译。 编译后会生成多两个文件，index.json 和 index.wxss. index.json的内容： 123&#123; "usingComponents": &#123;&#125;&#125; index.wxss的内容(只有一行注释)：/* pages/index/index.wxss */ 最后内容显示了hello world 总结小程序的主要开发语言是 JavaScript 。小程序的开发渲染线程和脚本线程是分别运行在不同的线程中，逻辑层和渲染层是分开的，逻辑层运行在 JSCore 中，并没有一个完整浏览器对象，所以前端的一些库，比如JQuery在小程序中是无法运行的。 小程序开发过程中需要面对的是两大操作系统 iOS 和 Android 的微信客户端，以及用于辅助开发的小程序开发者工具。 小程序的运行环境： 运行环境 逻辑层 渲染层 iOS JavaScriptCore WKWebView 安卓 X5 JSCore X5浏览器 小程序开发者工具 NWJS Chrome WebView]]></content>
+      <categories>
+        <category>小程序</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript函数闭包]]></title>
     <url>%2F2018%2F10%2F17%2FJavaScript%E5%87%BD%E6%95%B0%E9%97%AD%E5%8C%85%2F</url>
     <content type="text"><![CDATA[闭包要解决的问题是：一个函数可以拥有私有变量，并且外部可以通过闭包访问该私有变量，如特权方法（类似JavaBean 的写法）： 123456789function Student(value) &#123; var name =value; this.getName= function() &#123; return name; &#125;; this.setName= function(value) &#123;name = value; &#125;;&#125; 闭包就是函数的局部变量集合，只是这些局部变量在函数返回后会继续存在。 闭包就是就是函数的“堆栈”在函数返回后并不释放，我们也可以理解为这些函数堆栈并不在栈上分配而是在堆上分配。 当在一个函数内定义另外一个函数就会产生闭包。 为了便于理解，我们可以简单的将闭包理解为： 闭包：是指有权访问另外一个函数作用域中的变量的函数 闭包的注意点： 1）由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。 2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（PublicMethod），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。 闭包的用途： 闭包可以用在许多地方。它的最大用处有两个，一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。 1234567891011121314151617181920212223function f1()&#123; var n=999; nAdd=function()&#123;n+=1&#125; function f2()&#123; alert(n); &#125; return f2; &#125; var result=f1(); result(); // 999 nAdd(); result(); // 1000]]></content>
