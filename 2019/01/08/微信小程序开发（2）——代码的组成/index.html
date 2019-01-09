@@ -98,7 +98,8 @@
 <meta property="og:description" content="小程序由配置代码JSON文件、模板代码 WXML 文件、样式代码 WXSS文件以及逻辑代码 JavaScript文件组成。通过创建一个快速模板，来了解这几种文件的作用。  创建项目选择&amp;quot;建立普通快速启动模板&amp;quot;，进入项目后，可以看到以下的项目目录结构：  Json配置文件在根目录下可以找到 app.json 文件，代码如下： 123456789101112&amp;#123;  &quot;pa">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/01/08/微信小程序开发（2）——代码的组成/15469186591406.png">
-<meta property="og:updated_time" content="2019-01-09T03:35:38.821Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/08/微信小程序开发（2）——代码的组成/15470382445355.png">
+<meta property="og:updated_time" content="2019-01-09T12:59:37.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序开发（2）——代码的组成">
 <meta name="twitter:description" content="小程序由配置代码JSON文件、模板代码 WXML 文件、样式代码 WXSS文件以及逻辑代码 JavaScript文件组成。通过创建一个快速模板，来了解这几种文件的作用。  创建项目选择&amp;quot;建立普通快速启动模板&amp;quot;，进入项目后，可以看到以下的项目目录结构：  Json配置文件在根目录下可以找到 app.json 文件，代码如下： 123456789101112&amp;#123;  &quot;pa">
@@ -304,7 +305,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-08T11:29:07+08:00">
                 2019-01-08
@@ -325,7 +326,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -360,7 +361,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  176
+                  440
                 </span>
               
 
@@ -390,9 +391,19 @@
 </blockquote>
 <p>创建项目选择<code>&quot;建立普通快速启动模板&quot;</code>，进入项目后，可以看到以下的项目目录结构：</p>
 <p><img src="15469186591406.png" alt=""></p>
-<h3 id="Json配置文件"><a href="#Json配置文件" class="headerlink" title="Json配置文件"></a>Json配置文件</h3><p>在根目录下可以找到 app.json 文件，代码如下：</p>
+<h3 id="Json配置文件"><a href="#Json配置文件" class="headerlink" title="Json配置文件"></a>Json配置文件</h3><p>在根目录下可以找到 <code>app.json</code> 文件，代码如下：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>:[</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/logs"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"window"</span>:&#123;</span><br><span class="line">    <span class="attr">"backgroundTextStyle"</span>:<span class="string">"light"</span>,</span><br><span class="line">    <span class="attr">"navigationBarBackgroundColor"</span>: <span class="string">"#fff"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTitleText"</span>: <span class="string">"WeChat"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTextStyle"</span>:<span class="string">"black"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>JSON文件是静态配置，小程序是无法在运行过程中去动态更新JSON 配置文件从而发生对应的变化的。</p>
+<h3 id="WXML文件"><a href="#WXML文件" class="headerlink" title="WXML文件"></a>WXML文件</h3><p>WXML 全称是 WeiXin Markup Language，是小程序框架设计的一套标签语言，结合小程序的基础组件、事件系统，可以构建出页面的结构。</p>
+<p>找到<code>app.json</code>文件，在pages下填加一行：</p>
+<p><img src="15470382445355.png" alt=""></p>
+<p>添加完后，会自动生成wxml目录，并且对于生成四个文件<code>index.js</code>,<code>index.json</code>,<code>index.wxml</code>,<code>index.wxss</code></p>
+<p>其中<code>index.wxml</code>的内容如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--pages/wxml/index.wxml--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span>pages/wxml/index.wxml<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>简单的 WXML语句在语法上同 HTML 非常相似。需要注意的是，WXML中的属性是大小写敏感的，也就是说 class 和 Class 在WXML中是不同的属性。</p>
+<p>示例：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--一个简单的文本标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- view 中包含了 text 标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--带有属性的图片标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"userinfo-avatar"</span> <span class="attr">src</span>=<span class="string">"./image/a.png"</span> &gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>WXML 语言提供了数据绑定的功能，可以在用户界面动态地展示数据。</p>
 
       
     </div>
@@ -491,10 +502,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -519,7 +530,7 @@
                 <a href="/archives">
               
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -530,7 +541,7 @@
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">Kategorien</span>
                 </a>
               </div>
             
@@ -541,7 +552,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">Tags</span>
                 </a>
               </div>
             
@@ -596,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Json配置文件"><span class="nav-number">1.</span> <span class="nav-text">Json配置文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Json配置文件"><span class="nav-number">1.</span> <span class="nav-text">Json配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WXML文件"><span class="nav-number">2.</span> <span class="nav-text">WXML文件</span></a></li></ol></div>
             
 
           </div>
@@ -629,7 +640,7 @@
     </span>
     <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.7k字</span>
+  <span class="post-count">博客全站共12.9k字</span>
    </div>
 </div>
 <div class="powered-by">
