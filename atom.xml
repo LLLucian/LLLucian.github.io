@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-08T03:26:04.577Z</updated>
+  <updated>2019-01-09T03:22:40.413Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,69 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Maven跳过单元测试</title>
+    <link href="http://yoursite.com/2019/01/09/Maven%E8%B7%B3%E8%BF%87%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2019/01/09/Maven跳过单元测试/</id>
+    <published>2019-01-09T03:11:39.000Z</published>
+    <updated>2019-01-09T03:22:40.413Z</updated>
+    
+    <content type="html"><![CDATA[<p>项目构建打包的时候，想要跳过一系列的单元测试，可以设置 <code>skipTests</code> 属性为 <code>true</code>。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line">  <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure><p>也可以通过命令行执行命令来跳过测试：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install -DskipTests</span><br></pre></td></tr></table></figure><p>还有另一个跳过测试的参数： <code>maven.test.skip</code> ，这个参数还会<strong>跳过编译测试部分</strong>。 <code>maven.test.skip</code> 实际上是控制 Surefire, Failsafe 和 Compiler Plugin这三个插件的执行。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install -Dmaven.test.skip=<span class="literal">true</span></span><br></pre></td></tr></table></figure><h2 id="默认跳过"><a href="#默认跳过" class="headerlink" title="默认跳过"></a>默认跳过</h2><p>如果想要默认跳过测试，但是又想可以通过命令行来控制执行测试，就可以在pom.xml中添加以下配置：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line">  <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line">  <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>$&#123;skipTests&#125;<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line">  [...]</span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure><p>这样就可以默认运行测试，也可以通过命令控制执行测试。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install -DskipTests=<span class="literal">false</span></span><br></pre></td></tr></table></figure><p>同样，其他Maven插件使用boolean类型的参数也可以这样使用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;项目构建打包的时候，想要跳过一系列的单元测试，可以设置 &lt;code&gt;skipTests&lt;/code&gt; 属性为 &lt;code&gt;true&lt;/code&gt;。&lt;/p&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;
+      
+    
+    </summary>
+    
+      <category term="Maven" scheme="http://yoursite.com/categories/Maven/"/>
+    
+    
+      <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发（1）——代码的组成</title>
+    <link href="http://yoursite.com/2019/01/08/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%882%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A3%E7%A0%81%E7%9A%84%E7%BB%84%E6%88%90/"/>
+    <id>http://yoursite.com/2019/01/08/微信小程序开发（2）——代码的组成/</id>
+    <published>2019-01-08T03:29:07.000Z</published>
+    <updated>2019-01-08T03:29:07.649Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>小程序由配置代码JSON文件、模板代码 WXML 文件、样式代码 WXSS文件以及逻辑代码 JavaScript文件组成。通过创建一个快速模板，来了解这几种文件的作用。</p></blockquote><p>创建项目选择<code>&quot;建立普通快速启动模板&quot;</code>，进入项目后，可以看到以下的项目目录结构：</p><p><img src="D:\Blog\source\_posts\微信小程序开发（2）——代码的组成\15469186591406.png" alt=""></p><h3 id="Json配置文件"><a href="#Json配置文件" class="headerlink" title="Json配置文件"></a>Json配置文件</h3><p>在根目录下可以找到 app.json 文件，代码如下：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>:[</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/logs"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"window"</span>:&#123;</span><br><span class="line">    <span class="attr">"backgroundTextStyle"</span>:<span class="string">"light"</span>,</span><br><span class="line">    <span class="attr">"navigationBarBackgroundColor"</span>: <span class="string">"#fff"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTitleText"</span>: <span class="string">"WeChat"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTextStyle"</span>:<span class="string">"black"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>JSON文件是静态配置，小程序是无法在运行过程中去动态更新JSON 配置文件从而发生对应的变化的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;小程序由配置代码JSON文件、模板代码 WXML 文件、样式代码 WXSS文件以及逻辑代码 JavaScript文件组成。通过创建一个快速模板，来了解这几种文件的作用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;创建项目选择&lt;code&gt;&amp;quot;
+      
+    
+    </summary>
+    
+      <category term="小程序" scheme="http://yoursite.com/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序" scheme="http://yoursite.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>微信小程序开发（1）——hello world</title>
-    <link href="http://yoursite.com/2019/01/08/world/"/>
-    <id>http://yoursite.com/2019/01/08/world/</id>
+    <link href="http://yoursite.com/2019/01/08/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94hello%20world/"/>
+    <id>http://yoursite.com/2019/01/08/微信小程序开发（1）——hello world/</id>
     <published>2019-01-08T02:50:47.000Z</published>
-    <updated>2019-01-08T03:26:04.577Z</updated>
+    <updated>2019-01-09T03:10:58.645Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>每次学习新的一门语言和技术，都以写hello world开始。现在学习开发小程序，也以hello world开始。</p></blockquote><p>首先要下载微信开发者工具：</p><p><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html" target="_blank" rel="noopener">https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html</a> </p><h3 id="1、创建项目"><a href="#1、创建项目" class="headerlink" title="1、创建项目"></a>1、创建项目</h3><p><img src="15469164199333.png" alt=""></p><p>首先选择项目目录，若还没有注册AppID，可以选择使用测试号的ID，然后填写项目名称，最后取消勾选“建立普通快速启动模板”的选项，不使用模板，自己来添加代码。</p><h3 id="2、添加Hello-world代码"><a href="#2、添加Hello-world代码" class="headerlink" title="2、添加Hello world代码"></a>2、添加Hello world代码</h3><p>在根目录下创建app.json，其内容如下。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>: [<span class="string">"pages/index/index"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在根目录下新建pages目录，然后在pages目录下新建index目录，接着在index目录下创建两个文件i<strong>ndex.wxml</strong>和i<strong>ndex.js</strong>。</p><p>index.wxml的内容：<code>&lt;text&gt;Hello World&lt;/text&gt;</code></p><p>index.js的内容：<code>Page({})</code></p><h3 id="3、编译项目"><a href="#3、编译项目" class="headerlink" title="3、编译项目"></a>3、编译项目</h3><p>点击编译，默认使用普通编译。</p><p>编译后会生成多两个文件，index.json 和 index.wxss.</p><p>index.json的内容：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"usingComponents"</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>index.wxss的内容(只有一行注释)：<code>/* pages/index/index.wxss */</code></p><p>最后内容显示了hello world</p><p><img src="15469169969213.png" alt=""></p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>小程序的主要开发语言是 JavaScript 。小程序的开发渲染线程和脚本线程是分别运行在不同的线程中，逻辑层和渲染层是分开的，逻辑层运行在 JSCore 中，并没有一个完整浏览器对象，所以前端的一些库，比如JQuery在小程序中是无法运行的。</p><p>小程序开发过程中需要面对的是两大操作系统 iOS 和 Android 的微信客户端，以及用于辅助开发的小程序开发者工具。</p><p><strong>小程序的运行环境：</strong></p><table><thead><tr><th><strong>运行环境</strong></th><th><strong>逻辑层</strong></th><th><strong>渲染层</strong></th></tr></thead><tbody><tr><td>iOS</td><td>JavaScriptCore</td><td>WKWebView</td></tr><tr><td>安卓</td><td>X5 JSCore</td><td>X5浏览器</td></tr><tr><td>小程序开发者工具</td><td>NWJS</td><td>Chrome WebView</td></tr></tbody></table>]]></content>
     
