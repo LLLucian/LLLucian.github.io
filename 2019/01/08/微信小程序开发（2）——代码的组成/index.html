@@ -99,7 +99,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/01/08/微信小程序开发（2）——代码的组成/15469186591406.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/08/微信小程序开发（2）——代码的组成/15470382445355.png">
-<meta property="og:updated_time" content="2019-01-09T12:59:37.946Z">
+<meta property="og:updated_time" content="2019-01-15T03:09:43.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序开发（2）——代码的组成">
 <meta name="twitter:description" content="小程序由配置代码JSON文件、模板代码 WXML 文件、样式代码 WXSS文件以及逻辑代码 JavaScript文件组成。通过创建一个快速模板，来了解这几种文件的作用。  创建项目选择&amp;quot;建立普通快速启动模板&amp;quot;，进入项目后，可以看到以下的项目目录结构：  Json配置文件在根目录下可以找到 app.json 文件，代码如下： 123456789101112&amp;#123;  &quot;pa">
@@ -393,7 +393,7 @@
 <p><img src="15469186591406.png" alt=""></p>
 <h3 id="Json配置文件"><a href="#Json配置文件" class="headerlink" title="Json配置文件"></a>Json配置文件</h3><p>在根目录下可以找到 <code>app.json</code> 文件，代码如下：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>:[</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/logs"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"window"</span>:&#123;</span><br><span class="line">    <span class="attr">"backgroundTextStyle"</span>:<span class="string">"light"</span>,</span><br><span class="line">    <span class="attr">"navigationBarBackgroundColor"</span>: <span class="string">"#fff"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTitleText"</span>: <span class="string">"WeChat"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTextStyle"</span>:<span class="string">"black"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>JSON文件是静态配置，小程序是无法在运行过程中去动态更新JSON 配置文件从而发生对应的变化的。</p>
+<p>JSON文件是静态配置，小程序是<strong>无法在运行过程中去动态更新JSON 配置文件</strong>从而发生对应的变化的。</p>
 <h3 id="WXML文件"><a href="#WXML文件" class="headerlink" title="WXML文件"></a>WXML文件</h3><p>WXML 全称是 WeiXin Markup Language，是小程序框架设计的一套标签语言，结合小程序的基础组件、事件系统，可以构建出页面的结构。</p>
 <p>找到<code>app.json</code>文件，在pages下填加一行：</p>
 <p><img src="15470382445355.png" alt=""></p>
@@ -529,7 +529,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
@@ -540,7 +540,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">Kategorien</span>
                 </a>
               </div>
@@ -551,7 +551,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">Tags</span>
                 </a>
               </div>
@@ -640,7 +640,7 @@
     </span>
     <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.9k字</span>
+  <span class="post-count">博客全站共13k字</span>
    </div>
 </div>
 <div class="powered-by">

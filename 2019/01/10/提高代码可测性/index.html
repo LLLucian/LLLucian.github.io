@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="小程序,学习," />
+  <meta name="keywords" content="代码规范,代码编写," />
 
 
 
@@ -89,21 +89,18 @@
 
 
 
-<meta name="description" content="每次学习新的一门语言和技术，都以写hello world开始。现在学习开发小程序，也以hello world开始。  首先要下载微信开发者工具： https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html  1、创建项目 首先选择项目目录，若还没有注册AppID，可以选择使用测试号的ID，然后填写项目名称，最后取消勾选“建立普">
-<meta name="keywords" content="小程序,学习">
+<meta name="description" content="编写容易测试的代码，可带来更佳的单测覆盖率，间接提升开发效率。这种思维能帮助人更清晰里梳理和分离通用逻辑和业务逻辑">
+<meta name="keywords" content="代码规范,代码编写">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序开发（1）——hello world">
-<meta property="og:url" content="http://yoursite.com/2019/01/08/world/index.html">
+<meta property="og:title" content="提高代码可测性">
+<meta property="og:url" content="http://yoursite.com/2019/01/10/提高代码可测性/index.html">
 <meta property="og:site_name" content="骆先生的博客">
-<meta property="og:description" content="每次学习新的一门语言和技术，都以写hello world开始。现在学习开发小程序，也以hello world开始。  首先要下载微信开发者工具： https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html  1、创建项目 首先选择项目目录，若还没有注册AppID，可以选择使用测试号的ID，然后填写项目名称，最后取消勾选“建立普">
+<meta property="og:description" content="编写容易测试的代码，可带来更佳的单测覆盖率，间接提升开发效率。这种思维能帮助人更清晰里梳理和分离通用逻辑和业务逻辑">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/01/08/world/15469164199333.png">
-<meta property="og:image" content="http://yoursite.com/2019/01/08/world/15469169969213.png">
-<meta property="og:updated_time" content="2019-01-08T03:26:04.577Z">
+<meta property="og:updated_time" content="2019-01-15T03:09:52.714Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信小程序开发（1）——hello world">
-<meta name="twitter:description" content="每次学习新的一门语言和技术，都以写hello world开始。现在学习开发小程序，也以hello world开始。  首先要下载微信开发者工具： https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html  1、创建项目 首先选择项目目录，若还没有注册AppID，可以选择使用测试号的ID，然后填写项目名称，最后取消勾选“建立普">
-<meta name="twitter:image" content="http://yoursite.com/2019/01/08/world/15469164199333.png">
+<meta name="twitter:title" content="提高代码可测性">
+<meta name="twitter:description" content="编写容易测试的代码，可带来更佳的单测覆盖率，间接提升开发效率。这种思维能帮助人更清晰里梳理和分离通用逻辑和业务逻辑">
 
 
 
@@ -133,14 +130,14 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/08/world/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/01/10/提高代码可测性/"/>
 
 
 
 
 
 
-  <title>微信小程序开发（1）——hello world | 骆先生的博客</title>
+  <title>提高代码可测性 | 骆先生的博客</title>
   
 
 
@@ -278,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/08/world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/10/提高代码可测性/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Leonard">
@@ -295,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">微信小程序开发（1）——hello world</h1>
+          <h1 class="post-title" itemprop="name headline">提高代码可测性</h1>
         
 
         <div class="post-meta">
@@ -307,8 +304,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-08T10:50:47+08:00">
-                2019-01-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-10T10:22:39+08:00">
+                2019-01-10
               </time>
             
 
@@ -330,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/小程序/" itemprop="url" rel="index">
-                    <span itemprop="name">小程序</span>
+                  <a href="/categories/编码规范/" itemprop="url" rel="index">
+                    <span itemprop="name">编码规范</span>
                   </a>
                 </span>
 
@@ -361,7 +358,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  459
+                  54
                 </span>
               
 
@@ -386,54 +383,7 @@
       
 
       
-        <blockquote>
-<p>每次学习新的一门语言和技术，都以写hello world开始。现在学习开发小程序，也以hello world开始。</p>
-</blockquote>
-<p>首先要下载微信开发者工具：</p>
-<p><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html" target="_blank" rel="noopener">https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html</a> </p>
-<h3 id="1、创建项目"><a href="#1、创建项目" class="headerlink" title="1、创建项目"></a>1、创建项目</h3><p><img src="15469164199333.png" alt=""></p>
-<p>首先选择项目目录，若还没有注册AppID，可以选择使用测试号的ID，然后填写项目名称，最后取消勾选“建立普通快速启动模板”的选项，不使用模板，自己来添加代码。</p>
-<h3 id="2、添加Hello-world代码"><a href="#2、添加Hello-world代码" class="headerlink" title="2、添加Hello world代码"></a>2、添加Hello world代码</h3><p>在根目录下创建app.json，其内容如下。</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>: [<span class="string">"pages/index/index"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在根目录下新建pages目录，然后在pages目录下新建index目录，接着在index目录下创建两个文件i<strong>ndex.wxml</strong>和i<strong>ndex.js</strong>。</p>
-<p>index.wxml的内容：<code>&lt;text&gt;Hello World&lt;/text&gt;</code></p>
-<p>index.js的内容：<code>Page({})</code></p>
-<h3 id="3、编译项目"><a href="#3、编译项目" class="headerlink" title="3、编译项目"></a>3、编译项目</h3><p>点击编译，默认使用普通编译。</p>
-<p>编译后会生成多两个文件，index.json 和 index.wxss.</p>
-<p>index.json的内容：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"usingComponents"</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>index.wxss的内容(只有一行注释)：<code>/* pages/index/index.wxss */</code></p>
-<p>最后内容显示了hello world</p>
-<p><img src="15469169969213.png" alt=""></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>小程序的主要开发语言是 JavaScript 。小程序的开发渲染线程和脚本线程是分别运行在不同的线程中，逻辑层和渲染层是分开的，逻辑层运行在 JSCore 中，并没有一个完整浏览器对象，所以前端的一些库，比如JQuery在小程序中是无法运行的。</p>
-<p>小程序开发过程中需要面对的是两大操作系统 iOS 和 Android 的微信客户端，以及用于辅助开发的小程序开发者工具。</p>
-<p><strong>小程序的运行环境：</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>运行环境</strong></th>
-<th><strong>逻辑层</strong></th>
-<th><strong>渲染层</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>iOS</td>
-<td>JavaScriptCore</td>
-<td>WKWebView</td>
-</tr>
-<tr>
-<td>安卓</td>
-<td>X5 JSCore</td>
-<td>X5浏览器</td>
-</tr>
-<tr>
-<td>小程序开发者工具</td>
-<td>NWJS</td>
-<td>Chrome WebView</td>
-</tr>
-</tbody>
-</table>
+        <p>编写容易测试的代码，可带来更佳的单测覆盖率，间接提升开发效率。这种思维能帮助人更清晰里梳理和分离通用逻辑和业务逻辑</p>
 
       
     </div>
@@ -451,9 +401,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/小程序/" rel="tag"># 小程序</a>
+            <a href="/tags/代码规范/" rel="tag"># 代码规范</a>
           
-            <a href="/tags/学习/" rel="tag"># 学习</a>
+            <a href="/tags/代码编写/" rel="tag"># 代码编写</a>
           
         </div>
       
@@ -466,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/17/JavaScript函数闭包/" rel="next" title="JavaScript函数闭包">
-                <i class="fa fa-chevron-left"></i> JavaScript函数闭包
+              <a href="/2019/01/09/Maven关于第三方包依赖/" rel="next" title="Maven关于第三方包依赖">
+                <i class="fa fa-chevron-left"></i> Maven关于第三方包依赖
               </a>
             
           </div>
@@ -475,6 +425,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/15/window安装Airflow问题解决/" rel="prev" title="window安装Airflow问题解决">
+                window安装Airflow问题解决 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -526,17 +480,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -555,7 +500,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
@@ -566,7 +511,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">Kategorien</span>
                 </a>
               </div>
@@ -577,7 +522,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">Tags</span>
                 </a>
               </div>
@@ -624,22 +569,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、创建项目"><span class="nav-number">1.</span> <span class="nav-text">1、创建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、添加Hello-world代码"><span class="nav-number">2.</span> <span class="nav-text">2、添加Hello world代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、编译项目"><span class="nav-number">3.</span> <span class="nav-text">3、编译项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -666,7 +595,7 @@
     </span>
     <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共11.8k字</span>
+  <span class="post-count">博客全站共13k字</span>
    </div>
 </div>
 <div class="powered-by">

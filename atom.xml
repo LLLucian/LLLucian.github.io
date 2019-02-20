@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-09T12:59:22.683Z</updated>
+  <updated>2019-01-15T03:42:31.100Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>window安装Airflow问题解决</title>
+    <link href="http://yoursite.com/2019/01/15/window%E5%AE%89%E8%A3%85Airflow%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <id>http://yoursite.com/2019/01/15/window安装Airflow问题解决/</id>
+    <published>2019-01-15T03:42:31.000Z</published>
+    <updated>2019-01-15T03:42:31.100Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>提高代码可测性</title>
+    <link href="http://yoursite.com/2019/01/10/%E6%8F%90%E9%AB%98%E4%BB%A3%E7%A0%81%E5%8F%AF%E6%B5%8B%E6%80%A7/"/>
+    <id>http://yoursite.com/2019/01/10/提高代码可测性/</id>
+    <published>2019-01-10T02:22:39.000Z</published>
+    <updated>2019-01-15T03:09:52.714Z</updated>
+    
+    <content type="html"><![CDATA[<p>编写容易测试的代码，可带来更佳的单测覆盖率，间接提升开发效率。这种思维能帮助人更清晰里梳理和分离通用逻辑和业务逻辑</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;编写容易测试的代码，可带来更佳的单测覆盖率，间接提升开发效率。这种思维能帮助人更清晰里梳理和分离通用逻辑和业务逻辑&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="编码规范" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+    
+      <category term="代码规范" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+      <category term="代码编写" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99/"/>
+    
+  </entry>
   
   <entry>
     <title>Maven关于第三方包依赖</title>
@@ -79,9 +121,9 @@
     <link href="http://yoursite.com/2019/01/08/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%EF%BC%882%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A3%E7%A0%81%E7%9A%84%E7%BB%84%E6%88%90/"/>
     <id>http://yoursite.com/2019/01/08/微信小程序开发（2）——代码的组成/</id>
     <published>2019-01-08T03:29:07.000Z</published>
-    <updated>2019-01-09T12:59:37.946Z</updated>
+    <updated>2019-01-15T03:09:43.066Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>小程序由配置代码JSON文件、模板代码 WXML 文件、样式代码 WXSS文件以及逻辑代码 JavaScript文件组成。通过创建一个快速模板，来了解这几种文件的作用。</p></blockquote><p>创建项目选择<code>&quot;建立普通快速启动模板&quot;</code>，进入项目后，可以看到以下的项目目录结构：</p><p><img src="15469186591406.png" alt=""></p><h3 id="Json配置文件"><a href="#Json配置文件" class="headerlink" title="Json配置文件"></a>Json配置文件</h3><p>在根目录下可以找到 <code>app.json</code> 文件，代码如下：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>:[</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/logs"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"window"</span>:&#123;</span><br><span class="line">    <span class="attr">"backgroundTextStyle"</span>:<span class="string">"light"</span>,</span><br><span class="line">    <span class="attr">"navigationBarBackgroundColor"</span>: <span class="string">"#fff"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTitleText"</span>: <span class="string">"WeChat"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTextStyle"</span>:<span class="string">"black"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>JSON文件是静态配置，小程序是无法在运行过程中去动态更新JSON 配置文件从而发生对应的变化的。</p><h3 id="WXML文件"><a href="#WXML文件" class="headerlink" title="WXML文件"></a>WXML文件</h3><p>WXML 全称是 WeiXin Markup Language，是小程序框架设计的一套标签语言，结合小程序的基础组件、事件系统，可以构建出页面的结构。</p><p>找到<code>app.json</code>文件，在pages下填加一行：</p><p><img src="15470382445355.png" alt=""></p><p>添加完后，会自动生成wxml目录，并且对于生成四个文件<code>index.js</code>,<code>index.json</code>,<code>index.wxml</code>,<code>index.wxss</code></p><p>其中<code>index.wxml</code>的内容如下：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--pages/wxml/index.wxml--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span>pages/wxml/index.wxml<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure><p>简单的 WXML语句在语法上同 HTML 非常相似。需要注意的是，WXML中的属性是大小写敏感的，也就是说 class 和 Class 在WXML中是不同的属性。</p><p>示例：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--一个简单的文本标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- view 中包含了 text 标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--带有属性的图片标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"userinfo-avatar"</span> <span class="attr">src</span>=<span class="string">"./image/a.png"</span> &gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br></pre></td></tr></table></figure><p>WXML 语言提供了数据绑定的功能，可以在用户界面动态地展示数据。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>小程序由配置代码JSON文件、模板代码 WXML 文件、样式代码 WXSS文件以及逻辑代码 JavaScript文件组成。通过创建一个快速模板，来了解这几种文件的作用。</p></blockquote><p>创建项目选择<code>&quot;建立普通快速启动模板&quot;</code>，进入项目后，可以看到以下的项目目录结构：</p><p><img src="15469186591406.png" alt=""></p><h3 id="Json配置文件"><a href="#Json配置文件" class="headerlink" title="Json配置文件"></a>Json配置文件</h3><p>在根目录下可以找到 <code>app.json</code> 文件，代码如下：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>:[</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/logs"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"window"</span>:&#123;</span><br><span class="line">    <span class="attr">"backgroundTextStyle"</span>:<span class="string">"light"</span>,</span><br><span class="line">    <span class="attr">"navigationBarBackgroundColor"</span>: <span class="string">"#fff"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTitleText"</span>: <span class="string">"WeChat"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTextStyle"</span>:<span class="string">"black"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>JSON文件是静态配置，小程序是<strong>无法在运行过程中去动态更新JSON 配置文件</strong>从而发生对应的变化的。</p><h3 id="WXML文件"><a href="#WXML文件" class="headerlink" title="WXML文件"></a>WXML文件</h3><p>WXML 全称是 WeiXin Markup Language，是小程序框架设计的一套标签语言，结合小程序的基础组件、事件系统，可以构建出页面的结构。</p><p>找到<code>app.json</code>文件，在pages下填加一行：</p><p><img src="15470382445355.png" alt=""></p><p>添加完后，会自动生成wxml目录，并且对于生成四个文件<code>index.js</code>,<code>index.json</code>,<code>index.wxml</code>,<code>index.wxss</code></p><p>其中<code>index.wxml</code>的内容如下：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--pages/wxml/index.wxml--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span>pages/wxml/index.wxml<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure><p>简单的 WXML语句在语法上同 HTML 非常相似。需要注意的是，WXML中的属性是大小写敏感的，也就是说 class 和 Class 在WXML中是不同的属性。</p><p>示例：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--一个简单的文本标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- view 中包含了 text 标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--带有属性的图片标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"userinfo-avatar"</span> <span class="attr">src</span>=<span class="string">"./image/a.png"</span> &gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br></pre></td></tr></table></figure><p>WXML 语言提供了数据绑定的功能，可以在用户界面动态地展示数据。</p>]]></content>
     
     <summary type="html">
     
